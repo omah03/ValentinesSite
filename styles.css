@@ -176,8 +176,8 @@ body.shake {
     }
 
     .heart {
-        width: 50px; /* Smaller heart icons */
-        height: 50px;
+        width: 30px; /* Smaller heart icons */
+        height: 30px;
     }
 }
 
