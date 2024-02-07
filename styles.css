@@ -6,7 +6,7 @@ body {
     justify-content: space-evenly;
     height: 100vh;
     margin: 0;
-    background: url('images/image.jpg') repeat;
+    /*background: url('images/image.jpg') repeat;*/
     font-size: 35px;
     color: rgb(255, 0, 174);
 }
@@ -38,7 +38,7 @@ body
 }
 
 .image{
-    height: 280px;
+    height: 400px;
     
 }
 
@@ -80,6 +80,27 @@ body
     animation: moveNoMessage 0.5s linear;
 }
 
+
+#healthBar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    z-index: 10;
+  }
+  
+.heart {
+    width: 70px;
+    height: 70px;
+    background-image: url('images/minecraft-full-heart.png'); 
+    background-size: cover;
+    margin-right: 2px;
+  }
+   
+.heart.empty {
+    background-image: url('images/heart-empty.png'); /* Use an empty heart icon image */
+  }
+  
 @keyframes moveNoMessage {
     0% { transform: translate(0, 0); }
     25% { transform: translate(30px, 30px); }
@@ -87,3 +108,46 @@ body
     75% { transform: translate(10px, 10px); }
     100% { transform: translate(0, 0); }
 }
+
+#flash-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 0, 0, 0.5);
+    z-index: 9999;
+}
+  
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+  
+body.shake {
+    animation: shake 0.5s;
+}
+#yesButton {
+    background-image: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00ab, #ff0000);
+    background-size: 300%;
+    color: white;
+    animation: glow 3s linear infinite, rainbow 3s ease infinite;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 30px rgba(255, 20, 147, 0.7), 0 0 40px rgba(255, 20, 147, 0.7), 0 0 50px rgba(255, 20, 147, 0.7), 0 0 60px rgba(255, 20, 147, 0.7);
+  }
+  
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff; }
+    50% { box-shadow: 0 0 20px #fff, 0 0 30px #ff4edd, 0 0 40px #ff4edd, 0 0 50px #ff4edd, 0 0 60px #ff4edd, 0 0 70px #ff4edd, 0 0 80px #ff4edd; }
+    100% { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff; }
+  }
+  
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  

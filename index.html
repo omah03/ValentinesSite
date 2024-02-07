@@ -9,10 +9,23 @@
 </head>
 
 <body>
+    <div id="flash-overlay"></div>
+    <div id="healthBar">
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+        <span class="heart full"></span>
+    </div>
     <div class="container">
         <div class="Mainprompt">
-            <img class="image" src="images/catflower.jpg"></img>
-            <h1 class="hh" id="name">Hey beautiful!</h1>
+            <img class="image" src="images/oppenheimer.JPG"></img>
+            <h1 class="hh" id="name">Hey Merve!</h1>
             <p class="pp" id="question">Will you be my Valentine?</p>
             <div class="buttons">
                 <button id="no-button" onclick="showMessage('No')">No</button>
@@ -22,11 +35,14 @@
                 <p>Nice try, but you can't escape that easily!</p>
             </div>
             <div class="hidden-message" id="yes-message">
-                <p>YAY! See you on the 14th, babygirl.</p>
+                <p></p>
             </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <audio id="noSound" src="hellnaw.mp3"></audio>
+    <audio id="yesSound" src="HAPPY.mp3"></audio>
+
 </body>
 
 </html>
