@@ -1,13 +1,12 @@
 body {
-    font-family: 'Lobster', cursive; /* Change to a romantic cursive font */
+    font-family: 'Lobster', cursive;
     background-color: #ffdde1;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 100vh;
     margin: 0;
-    /*background: url('images/image.jpg') repeat;*/
-    font-size: 35px;
+    font-size: 35px; /* Consider making this smaller on smaller screens */
     color: rgb(255, 0, 174);
 }
 .hh{
@@ -52,7 +51,7 @@ body
     font-size: 26px;
     cursor: pointer;
     position: relative;
-    font-family: 'Lobster', cursive; /* Change to a romantic cursive font */
+    font-family: 'Lobster', cursive; 
 
 }
 
@@ -98,7 +97,7 @@ body
   }
    
 .heart.empty {
-    background-image: url('images/heart-empty.png'); /* Use an empty heart icon image */
+    background-image: url('images/heart-empty.png'); 
   }
   
 @keyframes moveNoMessage {
@@ -151,3 +150,40 @@ body.shake {
     100% { background-position: 0% 50%; }
   }
   
+  @media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        font-size: 20px; /* Smaller font size for small devices */
+    }
+
+    .hh, .pp {
+        -webkit-text-stroke: 1px #71004f; /* Thinner text stroke for readability */
+        font-size: 28px; /* Smaller font size for headings */
+    }
+
+    .container {
+        flex-direction: column; /* Adjust layout for smaller screens */
+        padding: 20px; /* Add some padding */
+    }
+
+    .image {
+        height: 200px; /* Smaller images on smaller screens */
+    }
+
+    .buttons button {
+        padding: 8px 20px; /* Smaller buttons */
+        font-size: 18px; /* Smaller font size for button text */
+    }
+
+    .heart {
+        width: 50px; /* Smaller heart icons */
+        height: 50px;
+    }
+}
+
+/* You may also want to consider making the .buttons flex-wrap to wrap on smaller screens */
+@media only screen and (max-width: 400px) {
+    .buttons {
+        flex-wrap: wrap;
+    }
+}
